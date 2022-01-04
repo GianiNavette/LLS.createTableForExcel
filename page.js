@@ -14,7 +14,7 @@ function addTags() {
   var button = document.createElement("button");
   button.innerHTML = "X";
   button.setAttribute("onclick", "removeThis(this,2)");
-  span.appendChild(button);
+  span.insertAdjacentElement("afterbegin",button);
   li.appendChild(span);
   selectedTags.appendChild(li);
 }
@@ -75,7 +75,7 @@ function createProduct(){
     var textTags="";
     [].forEach.call(tags, function(tag) {
         // do whatever
-        textTags+=tag.textContent.slice(0, -1)+", ";
+        textTags+=tag.textContent.substring(1)+", ";
       });
     textTags = textTags.slice(0, -2);
     var price = document.querySelector("input[name='TTC']").value;
