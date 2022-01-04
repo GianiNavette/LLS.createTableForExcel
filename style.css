@@ -49,6 +49,7 @@ outline: .1rem solid transparent;
     display: none;
 }
 #resultat {
+    display: none;
     max-width: 100%;
     overflow: auto;
 }

@@ -376,42 +376,42 @@
           <label for="ProductType">Type de vetements</label>
           <select name="ProductType" id="TypeSelected">min="0" 
             <option value="">Choisir une type </option>
-            <option value="t-shirts"> t-shirts</option>
-            <option value="sweats"> sweats</option>
-            <option value="vestes"> vestes</option>
-            <option value="accessoires"> accessoires</option>
-            <option value="chaussures"> chaussures</option>
-            <option value="pantalons"> pantalons</option>
-            <option value="pulls"> pulls</option>
-            <option value="couvre-chefs"> couvre-chefs</option>
-            <option value="chemises"> chemises</option>
+            <option value="T-shirts"> t-shirts</option>
+            <option value="Sweats"> sweats</option>
+            <option value="Vestes"> vestes</option>
+            <option value="Accessoires"> accessoires</option>
+            <option value="Chaussures"> chaussures</option>
+            <option value="Pantalons"> pantalons</option>
+            <option value="Pulls"> pulls</option>
+            <option value="Couvre-chefs"> couvre-chefs</option>
+            <option value="Chemises"> chemises</option>
             <option value="manteaux"> manteaux</option>
-            <option value="shorts"> shorts</option>
+            <option value="Shorts"> shorts</option>
             <option value="chemise"> chemise</option>
             
           </select>
           <label for="tags">Choisir des tags</label>
           <select onchange="addTags()" name="tags" id="SelectableTags">
               <option value="">Choisir des tags</option>
-            <option value="nouveautés"> nouveautés</option>
-            <option value="t-shirts"> t-shirts</option>
-            <option value="sweats"> sweats</option>
-            <option value="vestes"> vestes</option>
-            <option value="chaussures"> chaussures</option>
-            <option value="pantalons"> pantalons</option>
-            <option value="accessoires"> accessoires</option>
-            <option value="pulls"> pulls</option>
+            <option value="Nouveautés"> nouveautés</option>
+            <option value="T-shirts"> t-shirts</option>
+            <option value="Sweats"> sweats</option>
+            <option value="Vestes"> vestes</option>
+            <option value="Chaussures"> chaussures</option>
+            <option value="Pantalons"> pantalons</option>
+            <option value="Accessoires"> accessoires</option>
+            <option value="Pulls"> pulls</option>
             <option value="manteaux"> manteaux</option>
-            <option value="sacs"> sacs</option>
-            <option value="tricots"> tricots</option>
-            <option value="couvre-chefs"> couvre-chefs</option>
-            <option value="chemises"> chemises</option>
+            <option value="Sacs"> sacs</option>
+            <option value="Tricots"> tricots</option>
+            <option value="Couvre-chefs"> couvre-chefs</option>
+            <option value="Chemises"> chemises</option>
             <option value="noel"> noel</option>
-            <option value="parfums"> parfums</option>
-            <option value="jean"> jean</option>
-            <option value="shorts"> shorts</option>
-            <option value="polos"> polos</option>
-            <option value="bougies"> bougies</option>
+            <option value="Parfums"> parfums</option>
+            <option value="Jeans"> jean</option>
+            <option value="Shorts"> shorts</option>
+            <option value="Polos"> polos</option>
+            <option value="Bougies"> bougies</option>
           </select>
           <ul id="selectedTags">
               <!-- <li><span>Vestes<button onclick="removeThis(this,2)">X</button></span> </li>
@@ -425,9 +425,9 @@
           <label for="TTC">Prix TTC</label>
           <input type="number"  placeholder="1.0" step="0.01" min="0" name="TTC" id="">
       </fieldset>
-      <button onclick="createProduct()">Copier Produit</button>
+      <button id="createProductBtn"onclick="createProduct()">Copier Produit</button>
       <div id="resultat">
-        <table id="tableResult">
+        <table id="tableHead">
             <tr>
                 <th>Handle</th>
                 <th>Title</th>
@@ -511,13 +511,9 @@
                 <th>Status</th>
             </tr>
 
-<!--             
-            <tr>
-              <td>16</td>
-              <td>14</td>
-              <td>10</td>
-            </tr> -->
+
           </table>
+          <table id="tableResult"></table>
       </div>
     </div>
   </body>

@@ -252,6 +252,40 @@ function createProduct(){
         `;
     }
     
-    result.insertAdjacentHTML("beforeend",content);
-    navigator.clipboard.writeText("<table>"+content+"</table>");
+    result.innerHTML = content;
+    copyEl(result);
+    var btnProduct = document.getElementById("createProductBtn");
+    btnProduct.classList.add("copier");
+    btnProduct.innerHTML="Produit copier !";
+    setTimeout(() => {
+        btnProduct.innerHTML="Copier Produit"; 
+        btnProduct.classList.remove("copier");
+    }, 1000);
 }
+
+const copyEl = (elToBeCopied) => {
+    let range, sel;
+    
+    // Ensure that range and selection are supported by the browsers
+    if (document.createRange && window.getSelection) {
+      
+      range = document.createRange();
+      sel = window.getSelection();
+      // unselect any element in the page
+      sel.removeAllRanges();
+  
+      try {
+        range.selectNodeContents(elToBeCopied);
+        sel.addRange(range);
+      } catch (e) {
+        range.selectNode(elToBeCopied);
+        sel.addRange(range);
+      }
+  
+      document.execCommand('copy');
+    }
+  
+    sel.removeAllRanges();
+  
+    console.log('Element Copied! Paste it in a file')
+  };
