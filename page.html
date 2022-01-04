@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Product Le Labo Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Creation de produit Le Labo Store</h1>
+    <div class="form">
+      <fieldset>
+        <legend>Produit</legend>
+        <label for="productName">Nom du produit</label>
+        <input type="text" name="productName" id="" />
+        <label for="description">Description</label>
+        <textarea name="description" id="" cols="30" rows="10"></textarea>
+        
+      </fieldset>
+      <div>
+        <input onclick="changeSize('unique')" checked type="radio" name="taille" value="tailleUnique" id="" />
+        <label for="tailleUnique">Taille unique</label>
+      
+        <input onclick="changeSize('tshirt')" type="radio" name="taille" value="Tshirt" id="" />
+        <label for="Tshirt">T shirt, Veste</label>
+        
+        <input onclick="changeSize('chaussure')" type="radio" name="taille" value="chaussure" id="" />
+        <label for="chaussure">Chaussure</label>
+
+        <input onclick="changeSize('custom')" type="radio" name="taille" value="custom" id="" />
+        <label for="custom">Personnalisée</label>
+       
+    </div>
+      <fieldset>
+        <legend>Taille :</legend>
+        <div class="tailleDiv unique">
+            <p>Taille unique</p>
+        </div>
+        <div class="tailleDiv disabled custom">
+            <label for="nomdeTaille">Titre de taille</label>
+            <input type="text" name="nomdeTaille" id="">
+            <button>Ajouter</button>
+        </div>
+
+        <div class="tailleDiv disabled chaussure">
+               <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="35" id="" />
+                  <label for="35">35</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity35">Quantité</label>
+                  <input min="0" type="number" name="Quantity35" id="" />
+                  <label for="ean35">EAN</label>
+                  <input type="text" name="ean35" id="">
+                </div>
+              </div>
+
+            <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="36" id="" />
+                  <label for="36">36</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity36">Quantité</label>
+                  <input min="0" type="number" name="Quantity36" id="" />
+                  <label for="ean36">EAN</label>
+                  <input type="text" name="ean36" id="">
+                </div>
+              </div>
+
+            <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="37" id="" />
+                  <label for="37">37</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity37">Quantité</label>
+                  <input min="0" type="number" name="Quantity37" id="" />
+                  <label for="ean37">EAN</label>
+                  <input type="text" name="ean37" id="">
+                </div>
+              </div>
+              
+            <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="38" id="" />
+                  <label for="38">38</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity38">Quantité</label>
+                  <input min="0" type="number" name="Quantity38" id="" />
+                  <label for="ean38">EAN</label>
+                  <input type="text" name="ean38" id="">
+                </div>
+              </div>
+              <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="39" id="" />
+                  <label for="39">39</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity39">Quantité</label>
+                  <input min="0" type="number" name="Quantity39" id="" />
+                  <label for="ean39">EAN</label>
+                  <input type="text" name="ean39" id="">
+                </div>
+              </div>
+              <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="40" id="" />
+                  <label for="40">40</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity">Quantité</label>
+                  <input min="0" type="number" name="Quantity40" id="" />
+                  <label for="ean40">EAN</label>
+                  <input type="text" name="ean40" id="">
+                </div>
+              </div>
+              <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="41" id="" />
+                  <label for="41">41</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity">Quantité</label>
+                  <input min="0" type="number" name="Quantity41" id="" />
+                  <label for="ean41">EAN</label>
+                  <input type="text" name="ean41" id="">
+                </div>
+              </div>
+
+              <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="42" id="" />
+                  <label for="42">42</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity">Quantité</label>
+                  <input min="0" type="number" name="Quantity42" id="" />
+                  <label for="ean42">EAN</label>
+                  <input type="text" name="ean42" id="">
+                </div>
+              </div>
+
+              <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="43" id="" />
+                  <label for="43">43</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity">Quantité</label>
+                  <input min="0" type="number" name="Quantity43" id="" />
+                  <label for="ean43">EAN</label>
+                  <input type="text" name="ean43" id="">
+                </div>
+              </div>
+
+              <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="44" id="" />
+                  <label for="44">44</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity">Quantité</label>
+                  <input min="0" type="number" name="Quantity44" id="" />
+                  <label for="ean44">EAN</label>
+                  <input type="text" name="ean44" id="">
+                </div>
+              </div>
+
+              <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="45" id="" />
+                  <label for="45">45</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity">Quantité</label>
+                  <input min="0" type="number" name="Quantity45" id="" />
+                  <label for="ean45">EAN</label>
+                  <input type="text" name="ean45" id="">
+                </div>
+              </div>
+
+              <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="46" id="" />
+                  <label for="46">46</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity">Quantité</label>
+                  <input min="0" type="number" name="Quantity46" id="" />
+                  <label for="ean46">EAN</label>
+                  <input type="text" name="ean46" id="">
+                </div>
+              </div>
+
+              <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="47" id="" />
+                  <label for="47">47</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity">Quantité</label>
+                  <input min="0" type="number" name="Quantity47" id="" />
+                  <label for="ean47">EAN</label>
+                  <input type="text" name="ean47" id="">
+                </div>
+              </div>
+
+              <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="48" id="" />
+                  <label for="48">48</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity">Quantité</label>
+                  <input min="0" type="number" name="Quantity48" id="" />
+                  <label for="ean48">EAN</label>
+                  <input type="text" name="ean48" id="">
+                </div>
+              </div>
+
+              <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="49" id="" />
+                  <label for="49">49</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="Quantity">Quantité</label>
+                  <input min="0" type="number" name="Quantity49" id="" />
+                  <label for="ean49">EAN</label>
+                  <input type="text" name="ean49" id="">
+                </div>
+              </div>
+
+        </div>
+        <div class="tailleDiv disabled tshirt">
+          <div class="attribute">
+            <div class="taille">
+              <input type="checkbox" name="ExtraSmall" id="" />
+              <label for="ExtraSmall">XS</label>
+            </div>
+
+            <div class="quantiy">
+              <label for="QuantityXS">Quantité</label>
+              <input min="0" type="number" name="QuantityXS" id="" />
+              <label for="eanXS">EAN</label>
+              <input type="text" name="eanXS" id="">
+            </div>
+          </div>
+          <div class="attribute">
+            <div class="taille">
+              <input type="checkbox" name="Small" id="" />
+              <label for="Small">S</label>
+            </div>
+            <div class="quantiy">
+              <label for="QuantityS">Quantité</label>
+              <input min="0" type="number" name="QuantityS" id="" />
+              <label for="eanS">EAN</label>
+              <input type="text" name="eanS" id="">
+            </div>
+          </div>
+          <div class="attribute">
+            <div class="taille">
+              <input type="checkbox" name="Medium" id="" />
+              <label for="Medium">M</label>
+            </div>
+            <div class="quantiy">
+              <label for="QuantityM">Quantité</label>
+              <input min="0" type="number" name="QuantityM" id="" />
+              <label for="eanS">EAN</label>
+              <input type="text" name="eanS" id="">
+            </div>
+          </div>
+          <div class="attribute">
+            <div class="taille">
+              <input type="checkbox" name="Large" id="" />
+              <label for="Large">L</label>
+            </div>
+            <div class="quantiy">
+              <label for="QuantityL">Quantité</label>
+              <input min="0" type="number" name="QuantityL" id="" />
+              <label for="eanL">EAN</label>
+              <input type="text" name="eanL" id="">
+            </div>
+          </div>
+          <div class="attribute">
+            <div class="taille">
+              <input type="checkbox" name="ExtraLarge" id="" />
+              <label for="ExtraLarge">XL</label>
+            </div>
+            <div class="quantiy">
+              <label for="QuantityXL">Quantité</label>
+              <input min="0" type="number" name="QuantityXL" id="" />
+              <label for="eanXL">EAN</label>
+              <input type="text" name="eanXL" id="">
+            </div>
+          </div>
+          <div class="attribute">
+            <div class="taille">
+              <input type="checkbox" name="ExtraExtraLarge" id="" />
+              <label for="ExtraExtraLarge">XXL</label>
+            </div>
+            <div class="quantiy">
+              <label for="QuantityXXL">Quantité</label>
+              <input min="0" type="number" name="QuantityXXL" id="" />
+              <label for="eanXXL">EAN</label>
+              <input type="text" name="eanXXL" id="">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+          <legend>Marque et Tags</legend>
+        <label for="Marque">Marque du vetement</label>
+          <select name="Marque" id="">
+            <option value="">Choisir une marque</option>
+            <option value="AMI PARIS">Ami Paris</option>
+            <option value="And wander">And wander</option>
+            <option value="Arc'teryx">Arc'teryx</option>
+            <option value="Arte">Arte</option>
+            <option value="Asics">Asics</option>
+            <option value="Comme des Garçons WALLET">Comme des Garçons WALLET</option>
+            <option value="Comme des garçons PLAY">Comme des garçons PLAY</option>
+            <option value="Comme des garçons Parfums">Comme des garçons Parfums</option>
+            <option value="Comme des garçons SHIRT">Comme des garçons SHIRT</option>
+            <option value="Common Projects">Common Projects</option>
+            <option value="Dime">Dime</option>
+            <option value="Dr. Martens">Dr.Martens</option>
+            <option value="L.L.S">Le Labo Store</option>
+            <option value="M+RC Noir">M+RC Noir</option>
+            <option value="Maison Kistune">Maison Kistune</option>
+            <option value="Maison Margiela">Maison Margiela</option>
+            <option value="Marni">Marni</option>
+            <option value="Our Legacy">Our Legacy</option>
+            <option value="Patta">Patta</option>
+            <option value="Polar Skate Co.">Polar Skate Co.</option>
+            <option value="RETROSUPERFUTURE">RETROSUPERFUTURE</option>
+            <option value="Raf Simons">Raf Simons</option>
+            <option value="Salomon">Salomon</option>
+            <option value="Stone Island">Stone Island</option>
+            <option value="Stussy">Stussy</option>
+            <option value="Sunnei">Sunnei</option>
+            <option value="The North Face">The North Face</option>
+            <option value="UNIFROM">Unifrom</option>
+          </select>
+          <label for="ProductType">Type de vetements</label>
+          <select name="ProductType" id="">min="0" 
+            <option value="">Choisir une type </option>
+            <option value="t-shirts"> t-shirts</option>
+            <option value="sweats"> sweats</option>
+            <option value="vestes"> vestes</option>
+            <option value="accessoires"> accessoires</option>
+            <option value="chaussures"> chaussures</option>
+            <option value="pantalons"> pantalons</option>
+            <option value="pulls"> pulls</option>
+            <option value="couvre-chefs"> couvre-chefs</option>
+            <option value="chemises"> chemises</option>
+            <option value="manteaux"> manteaux</option>
+            <option value="shorts"> shorts</option>
+            <option value="chemise"> chemise</option>
+            
+          </select>
+          <label for="tags">Choisir des tags</label>
+          <select onchange="addTags()" name="tags" id="SelectableTags">
+              <option value="">Choisir des tags</option>
+            <option value="nouveautés"> nouveautés</option>
+            <option value="t-shirts"> t-shirts</option>
+            <option value="sweats"> sweats</option>
+            <option value="vestes"> vestes</option>
+            <option value="chaussures"> chaussures</option>
+            <option value="pantalons"> pantalons</option>
+            <option value="accessoires"> accessoires</option>
+            <option value="pulls"> pulls</option>
+            <option value="manteaux"> manteaux</option>
+            <option value="sacs"> sacs</option>
+            <option value="tricots"> tricots</option>
+            <option value="couvre-chefs"> couvre-chefs</option>
+            <option value="chemises"> chemises</option>
+            <option value="noel"> noel</option>
+            <option value="parfums"> parfums</option>
+            <option value="jean"> jean</option>
+            <option value="shorts"> shorts</option>
+            <option value="polos"> polos</option>
+            <option value="bougies"> bougies</option>
+          </select>
+          <ul id="selectedTags">
+              <!-- <li><span>Vestes<button onclick="removeThis(this,2)">X</button></span> </li>
+              <li><span>Vestes<button onclick="removeThis(this,2)">X</button></span> </li> -->
+          </ul>
+      </fieldset>
+      <fieldset>
+          <legend>Prix</legend>
+          <label for="PUHT">Prix avant marge</label>
+          <input type="number" placeholder="1.0" step="0.01" min="0" name="PUHT" id="">
+          <label for="TTC">Prix TTC</label>
+          <input type="number"  placeholder="1.0" step="0.01" min="0" name="TTC" id="">
+      </fieldset>
+      <button>Copier Produit</button>
+      <div id="resultat"></div>
+    </div>
+  </body>
+  <script src="page.js"></script>
+</html>
