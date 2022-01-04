@@ -19,6 +19,7 @@ function addTags() {
   selectedTags.appendChild(li);
 }
 var oldOption = "unique";
+changeSize("unique");
 function changeSize(option) {
 document.querySelector("."+oldOption).classList.add("disabled");
 oldOption = option;
@@ -28,7 +29,7 @@ el.classList.remove("disabled");
 
 }
 function addTaille(){
-    
+ 
     var nom = document.getElementById("nomdeTaille").value;
     var content = `<div class="attribute">
     <div class="taille">
@@ -49,6 +50,7 @@ function addTaille(){
 }
 
 function createProduct(){
+   
     var productName = document.querySelector('input[name="productName"]').value;
     var handle = productName.toLowerCase().replace(/ /g,"-");;
     var description = document.querySelector('textarea[name="description"]').value;
@@ -289,3 +291,9 @@ const copyEl = (elToBeCopied) => {
   
     console.log('Element Copied! Paste it in a file')
   };
+
+function resetForm(){
+    document.getElementById("productForm").reset(); 
+    document.querySelector("#selectedTags li").remove();
+    changeSize("unique");
+}
