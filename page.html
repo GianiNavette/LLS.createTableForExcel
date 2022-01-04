@@ -18,7 +18,7 @@
         <textarea name="description" id="" cols="30" rows="10"></textarea>
         
       </fieldset>
-      <div>
+      <div class="sizeType">
         <input onclick="changeSize('unique')" checked type="radio" name="taille" value="tailleUnique" id="" />
         <label for="tailleUnique">Taille unique</label>
       
@@ -35,28 +35,39 @@
       <fieldset>
         <legend>Taille :</legend>
         <div class="tailleDiv unique">
-            <p>Taille unique</p>
-        </div>
-        <div class="tailleDiv disabled custom">
-            <label for="nomdeTaille">Titre de taille</label>
-            <input type="text" name="nomdeTaille" id="">
-            <button>Ajouter</button>
-        </div>
-
-        <div class="tailleDiv disabled chaussure">
-               <div class="attribute">
+            <div class="attribute">
                 <div class="taille">
-                  <input type="checkbox" name="35" id="" />
-                  <label for="35">35</label>
+                  <input checked type="checkbox" name="unique" id="" />
+                  <label for="unique">Taille unique</label>
                 </div>
     
                 <div class="quantiy">
-                  <label for="Quantity35">Quantité</label>
-                  <input min="0" type="number" name="Quantity35" id="" />
-                  <label for="ean35">EAN</label>
-                  <input type="text" name="ean35" id="">
+                  <label for="Quantity">Quantité</label>
+                  <input min="0" type="number" name="QuantityUnique" id="" />
+                  <label for="eanUnique">EAN</label>
+                  <input type="text" name="eanUnique" id="">
                 </div>
               </div>
+        </div>
+        <div class="tailleDiv disabled custom">
+            <label for="nomdeTaille">Titre de taille</label>
+            <input type="text" name="nomdeTaille" id="nomdeTaille">
+            <button onclick="addTaille()">Ajouter</button>
+        </div>
+
+        <div class="tailleDiv disabled chaussure">
+            <div class="attribute">
+                 <div class="taille">
+                      <input type="checkbox" name="35" id="" />
+                      <label for="35">35</label>
+                 </div>
+                <div class="quantiy">
+                     <label for="Quantity35">Quantité</label>
+                     <input min="0" type="number" name="Quantity35" id="" />
+                     <label for="ean35">EAN</label>
+                    <input type="text" name="ean35" id="">
+                </div>
+            </div>
 
             <div class="attribute">
                 <div class="taille">
@@ -331,7 +342,7 @@
       <fieldset>
           <legend>Marque et Tags</legend>
         <label for="Marque">Marque du vetement</label>
-          <select name="Marque" id="">
+          <select name="Marque" id="MarqueSelected">
             <option value="">Choisir une marque</option>
             <option value="AMI PARIS">Ami Paris</option>
             <option value="And wander">And wander</option>
@@ -363,7 +374,7 @@
             <option value="UNIFROM">Unifrom</option>
           </select>
           <label for="ProductType">Type de vetements</label>
-          <select name="ProductType" id="">min="0" 
+          <select name="ProductType" id="TypeSelected">min="0" 
             <option value="">Choisir une type </option>
             <option value="t-shirts"> t-shirts</option>
             <option value="sweats"> sweats</option>
@@ -414,8 +425,100 @@
           <label for="TTC">Prix TTC</label>
           <input type="number"  placeholder="1.0" step="0.01" min="0" name="TTC" id="">
       </fieldset>
-      <button>Copier Produit</button>
-      <div id="resultat"></div>
+      <button onclick="createProduct()">Copier Produit</button>
+      <div id="resultat">
+        <table id="tableResult">
+            <tr>
+                <th>Handle</th>
+                <th>Title</th>
+                <th>Body (HTML)</th>
+                <th>Vendor</th>
+                <th>Standard Product Type</th>
+                <th>Custom Product Type</th>
+                <th>Tags</th>
+                <th>Published</th>
+                <th>Option1 Name</th>
+                <th>Option1 Value</th>
+                <th>Option2 Name</th>
+                <th>Option2 Value</th>
+                <th>Option3 Name</th>
+                <th>Option3 Value</th>
+                <th>Variant SKU</th>
+                <th>Variant Grams</th>
+                <th>Variant Inventory Tracker</th>
+                <th>Variant Inventory Qty</th>
+                <th>Variant Inventory Policy</th>
+                <th>Variant Fulfillment Service</th>
+                <th>Variant Price</th>
+                <th>Variant Compare At Price</th>
+                <th>Variant Requires Shipping</th>
+                <th>Variant Taxable</th>
+                <th>Variant Barcode</th>
+                <th>Image Src</th>
+                <th>Image Position</th>
+                <th>Image Alt Text</th>
+                <th>Gift Card</th>
+                <th>Variant Image</th>
+                <th>Variant Weight Unit</th>
+                <th>Variant Tax Code</th>
+                <th>Cost per item</th>
+                <th>Price / AD</th>
+                <th>Compare At Price / AD</th>
+                <th>Price / AT</th>
+                <th>Compare At Price / AT</th>
+                <th>Price / BE</th>
+                <th>Compare At Price / BE</th>
+                <th>Price / CY</th>
+                <th>Compare At Price / CY</th>
+                <th>Price / DE</th>
+                <th>Compare At Price / DE</th>
+                <th>Price / EE</th>
+                <th>Compare At Price / EE</th>
+                <th>Price / ES</th>
+                <th>Compare At Price / ES</th>
+                <th>Price / FI</th>
+                <th>Compare At Price / FI</th>
+                <th>Price / GR</th>
+                <th>Compare At Price / GR</th>
+                <th>Price / IE</th>
+                <th>Compare At Price / IE</th>
+                <th>Price / IT</th>
+                <th>Compare At Price / IT</th>
+                <th>Price / LT</th>
+                <th>Compare At Price / LT</th>
+                <th>Price / LU</th>
+                <th>Compare At Price / LU</th>
+                <th>Price / LV</th>
+                <th>Compare At Price / LV</th>
+                <th>Price / MC</th>
+                <th>Compare At Price / MC</th>
+                <th>Price / ME</th>
+                <th>Compare At Price / ME</th>
+                <th>Price / MT</th>
+                <th>Compare At Price / MT</th>
+                <th>Price / NL</th>
+                <th>Compare At Price / NL</th>
+                <th>Price / PT</th>
+                <th>Compare At Price / PT</th>
+                <th>Price / SI</th>
+                <th>Compare At Price / SI</th>
+                <th>Price / SK</th>
+                <th>Compare At Price / SK</th>
+                <th>Price / SM</th>
+                <th>Compare At Price / SM</th>
+                <th>Price / XK</th>
+                <th>Compare At Price / XK</th>
+                <th>Status</th>
+            </tr>
+
+<!--             
+            <tr>
+              <td>16</td>
+              <td>14</td>
+              <td>10</td>
+            </tr> -->
+          </table>
+      </div>
     </div>
   </body>
   <script src="page.js"></script>
