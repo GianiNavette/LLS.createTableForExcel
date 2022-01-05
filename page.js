@@ -80,9 +80,16 @@ function createProduct(){
     textTags = textTags.slice(0, -2);
     var price = document.querySelector("input[name='TTC']").value;
     var costPerItem = document.querySelector("input[name='PUHT']").value;
-    var result = document.getElementById("tableResult")
+    var result = document.getElementById("tableResult");
+    var resultAppended = document.getElementById("tableHead");
     
-    
+
+   
+    /*createProduct2(handle,productName,description,array,textTags,price,costPerItem);*/
+
+
+
+
     var content = `
     <tr>
     <td>`+handle+`</td>
@@ -253,7 +260,7 @@ function createProduct(){
         </tr>
         `;
     }
-    
+    resultAppended.insertAdjacentHTML("beforeend",content);
     result.innerHTML = content;
     copyEl(result);
     var btnProduct = document.getElementById("createProductBtn");
@@ -263,8 +270,22 @@ function createProduct(){
         btnProduct.innerHTML="Copier Produit"; 
         btnProduct.classList.remove("copier");
     }, 1000);
-}
 
+
+    
+
+}
+/*
+
+function createProduct2(handleV,productNameV,descriptionV,taillesV,textTagsV,priceV,costPerItemV){
+
+    var productStorage = localStorage.getItem("products");
+    var product = {handle: handleV, productName: productNameV, description:descriptionV,tailles:taillesV,textTags:textTagsV,price:priceV, costPerItem:costPerItemV};
+    productStorage.push(product);
+    localStorage.setItem("products", productStorage);
+}*/
+
+//var templateProduct = document.getElementById("productTemplate");
 const copyEl = (elToBeCopied) => {
     let range, sel;
     
