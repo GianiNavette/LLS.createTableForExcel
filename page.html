@@ -18,17 +18,17 @@
         <input required type="text" name="productName" id="" />
         <label for="description">Description</label>
         <textarea name="description" id="" cols="30" rows="10"></textarea>
-        
+        <button class="resetbtn" type="button" onclick="resetMidForm(this)">reset</button>
       </fieldset>
       <div class="sizeType">
         <input onclick="changeSize('unique')" checked type="radio" name="taille" value="tailleUnique" id="" />
         <label for="tailleUnique">Taille unique</label>
       
         <input onclick="changeSize('tshirt')" type="radio" name="taille" value="Tshirt" id="" />
-        <label for="Tshirt">T shirt, Veste</label>
+        <label for="Tshirt">S/M/L/XL/XXL</label>
         
         <input onclick="changeSize('chaussure')" type="radio" name="taille" value="chaussure" id="" />
-        <label for="chaussure">Chaussure</label>
+        <label for="chaussure">39/40/41</label>
 
         <input onclick="changeSize('custom')" type="radio" name="taille" value="custom" id="" />
         <label for="custom">Personnalisée</label>
@@ -54,7 +54,7 @@
         <div class="tailleDiv disabled custom">
             <label for="nomdeTaille">Titre de taille</label>
             <input type="text" name="nomdeTaille" id="nomdeTaille">
-            <button onclick="addTaille()">Ajouter</button>
+            <button type="button" onclick="addTaille()">Ajouter</button>
         </div>
 
         <div class="tailleDiv disabled chaussure">
@@ -266,6 +266,19 @@
 
         </div>
         <div class="tailleDiv disabled tshirt">
+            <div class="attribute">
+                <div class="taille">
+                  <input type="checkbox" name="ExtraExtraSmall" id="" />
+                  <label for="ExtraExtraSmall">XXS</label>
+                </div>
+    
+                <div class="quantiy">
+                  <label for="QuantityXXS">Quantité</label>
+                  <input min="0" type="number" name="QuantityXXS" id="" />
+                  <label for="eanXXS">EAN</label>
+                  <input type="text" name="eanXXS" id="">
+                </div>
+              </div>
           <div class="attribute">
             <div class="taille">
               <input type="checkbox" name="ExtraSmall" id="" />
@@ -340,6 +353,7 @@
             </div>
           </div>
         </div>
+        <button class="resetbtn" type="button" onclick="resetMidForm(this)">reset</button>
       </fieldset>
       <fieldset>
           <legend>Marque et Tags</legend>
@@ -359,6 +373,7 @@
             <option value="Dime">Dime</option>
             <option value="Dr. Martens">Dr.Martens</option>
             <option value="L.L.S">Le Labo Store</option>
+            <option value="Lacoste">Lacoste</option>
             <option value="M+RC Noir">M+RC Noir</option>
             <option value="Maison Kistune">Maison Kistune</option>
             <option value="Maison Margiela">Maison Margiela</option>
@@ -416,9 +431,9 @@
             <option value="Bougies"> bougies</option>
           </select>
           <ul id="selectedTags">
-              <!-- <li><span>Vestes<button onclick="removeThis(this,2)">X</button></span> </li>
-              <li><span>Vestes<button onclick="removeThis(this,2)">X</button></span> </li> -->
+    
           </ul>
+          <button class="resetbtn" type="button" onclick="resetMidForm(this)">reset</button>
       </fieldset>
       <fieldset>
           <legend>Prix</legend>
@@ -429,7 +444,7 @@
       </fieldset>
       <div class="actionbtn">
         <button id="createProductBtn" onclick="createProduct()">Copier Produit</button>
-        <button onclick="resetForm()">Remettre à zéro</button>
+        <button  onclick="resetForm()">Remettre à zéro</button>
       </div>
       
     </form>

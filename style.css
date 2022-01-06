@@ -35,6 +35,10 @@ color: #202223;
 outline: .1rem solid transparent;
 
 }
+.resetbtn{
+    width: 100px;
+    margin:0 auto;
+}
 #selectedTags li span button  {
 
     background-color: hsl(220, 6%, 88%);

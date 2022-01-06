@@ -29,19 +29,23 @@ el.classList.remove("disabled");
 
 }
 function addTaille(){
- 
+
     var nom = document.getElementById("nomdeTaille").value;
+    if (nom==""){
+        return;
+    }
     var content = `<div class="attribute">
     <div class="taille">
          <input checked type="checkbox" name="`+nom+`" id="" />
-         <label for="`+nom+`">`+nom+`</label>
+         <label contentEditable for="`+nom+`">`+nom+`</label>
     </div>
    <div class="quantiy">
         <label for="Quantity`+nom+`">Quantité</label>
         <input min="0" type="number" name="Quantity`+nom+`" id="" />
         <label for="ean`+nom+`">EAN</label>
        <input type="text" name="ean`+nom+`" id="">
-       <button onclick='removeThis(this,3)'>X</button>
+       <button type="button" onclick='removeThis(this,3)'>X</button>
+       
    </div>
 </div>`;
     var div = document.createElement("div");
@@ -318,3 +322,26 @@ function resetForm(){
     document.querySelector("#selectedTags li").remove();
     changeSize("unique");
 }
+function resetMidForm(e){
+var fieldset = e.parentElement;
+var isTagfieldset=false;
+var fieldsetInputs = fieldset.querySelectorAll("input, select, textarea");
+if(fieldset.querySelectorAll("#selectedTags li").length>0){
+    isTagfieldset=true;
+}
+[].forEach.call(fieldsetInputs, function(input) {
+    // do whatever
+    
+    if(input.type == "checkbox"){
+        input.checked = false;
+    } else {
+        input.value = "";
+    }
+    if(isTagfieldset){
+        
+        document.querySelector("#selectedTags").innerHTML="";
+        isTagfieldset=false;
+    }
+  });
+}
+
